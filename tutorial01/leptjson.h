@@ -7,6 +7,7 @@ typedef struct {
     lept_type type;
 }lept_value;
 
+// success flag
 enum {
     LEPT_PARSE_OK = 0,
     LEPT_PARSE_EXPECT_VALUE,
@@ -14,6 +15,7 @@ enum {
     LEPT_PARSE_ROOT_NOT_SINGULAR
 };
 
+// parse json string to lept_value
 int lept_parse(lept_value* v, const char* json);
 
 lept_type lept_get_type(const lept_value* v);
